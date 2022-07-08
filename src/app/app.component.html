@@ -1,0 +1,7 @@
+<div class="container">
+  <main class="col-12">
+    <div [formGroup]="userInfoFormGroup">
+        <app-user-info-add [namesFormGroup]="userInfoFormGroup.get('names')"></app-user-info-add>
+    </div>
+  </main>
+</div>

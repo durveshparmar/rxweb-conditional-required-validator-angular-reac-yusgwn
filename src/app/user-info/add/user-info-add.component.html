@@ -1,0 +1,16 @@
+<h3 class="bd-title" id="content">required Validator Conditional Validation Example</h3>
+<br/>
+<form [formGroup]="namesFormGroup">
+	<div class="form-group">
+		<label>First Name</label>
+		<input type="text" formControlName="firstName" class="form-control"  />
+	</div>
+	<div class="form-group">
+		<label>Last Name</label>
+		<input type="text" formControlName="lastName" class="form-control"  />
+		<small class="form-text text-primary" >'lastName' field is required, if the 'firstName' field value is 'John'.</small>
+		<p class="form-text text-primary" >{{ namesFormGroup.get('lastName').errors | json }}</p>
+
+	</div>
+	<button [disabled]="!namesFormGroup.valid" class="btn btn-primary">Submit</button>
+</form>
